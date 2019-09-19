@@ -8,9 +8,9 @@ void BFS(long long a[100][100], long long N, long long S, long long G, long long
 	q.push(S);
 	while (!q.empty()) {
 		i = q.front();
+		check[i] = 1;
 		for (j = 0; j <= N; j++)
 			if (a[i][j] && !check[j]) {
-				check[j] = 1;
 				trace[j] = i;
 				if (j == G)
 					return;
